@@ -23,6 +23,7 @@ def create_shared_memory(name, size):
     except FileExistsError:
         try:
             existing_shm = shared_memory.SharedMemory(name=name)
+            existing_shm.close()
             existing_shm.unlink()
         except FileNotFoundError:
             pass

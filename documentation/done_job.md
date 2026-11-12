@@ -24,5 +24,5 @@ However, the system still needs improvement, validation, and extension based on 
 * Background subtraction-based motion detection
 * Dynamic detection control per camera (configured in settings page)
 * Web dashboard built with Flask and Jinja2
-* Alerts stored in SQLite and optionally sent via desktop/email
+* Multi-channel notification delivery (desktop and SMTP email)
 * Face registration through web interface

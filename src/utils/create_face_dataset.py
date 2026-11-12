@@ -24,7 +24,7 @@ def create_face_dataset(person_name, dataset_dir="dataset"):
 
     while True:
         ret, frame = cap.read()
-        if not ret:
+        if not ret or frame is None:
             print("[ERROR] Failed to grab a frame from the camera.")
             break
 

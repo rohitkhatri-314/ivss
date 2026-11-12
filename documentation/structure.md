@@ -8,6 +8,7 @@
   * Log precision, recall, and F1-score for motion, object, and face detection.
   * Build a basic review interface to mark alerts as valid/invalid (optional).
   * Optimize thresholds for each model (YOLO confidence, motion score, face match score).
+  * Introduce benchmark validation routines for multi-camera streams.
 
 ---
 

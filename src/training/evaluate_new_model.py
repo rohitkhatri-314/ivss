@@ -26,7 +26,8 @@ def evaluate_model():
     
     try:
         # Validate the model
-        results = model.val(data="../../data/datasets/test_images/weapon-detection.v4i.yolov5pytorch/data.yaml")
+        val_data_path = "../../data/datasets/test_images/weapon-detection.v4i.yolov5pytorch/data.yaml"
+        results = model.val(data=val_data_path)
         
         print("\n📈 Model Performance Metrics:")
         print("="*50)

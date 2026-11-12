@@ -13,6 +13,10 @@ def show_structure():
     print("=" * 50)
     print()
     
+    base_path = Path(__file__).resolve().parent.parent
+    print(f"📍 Root Directory: {base_path}")
+    print()
+    
     print("📁 NEW PROJECT STRUCTURE:")
     print("-" * 30)
     

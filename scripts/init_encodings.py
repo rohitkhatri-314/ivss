@@ -26,10 +26,13 @@ def create_initial_encodings():
             "names": []
         }
         
-        with open(encodings_file, "wb") as f:
-            pickle.dump(initial_data, f)
-        
-        print(f"✅ Created empty encodings file")
+        try:
+            with open(encodings_file, "wb") as f:
+                pickle.dump(initial_data, f)
+            print("✅ Created empty encodings file")
+        except IOError as e:
+            print(f"❌ Failed to write encodings file: {e}")
+            return
         print("📝 To add faces:")
         print("   1. Use the web interface at /register_face")
         print("   2. Or run: python src/utils/create_face_dataset.py")

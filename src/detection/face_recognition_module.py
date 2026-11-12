@@ -219,7 +219,8 @@ def face_recognition_process(shm_name, shape, output_queue, cam_id):
                 image_path = save_face_frame(frame, cam_id, name)
                 for face in detected_faces:
                     face["image_path"] = image_path
-                output_queue.put(detected_faces)
+                if not output_queue.full():
+                    output_queue.put(detected_faces)
 
     except Exception as e:
         print(f"[ERROR] Face recognition process encountered an issue: {str(e)}")

@@ -44,7 +44,7 @@ class DataAugmentor:
         os.makedirs(output_images_dir, exist_ok=True)
         os.makedirs(output_labels_dir, exist_ok=True)
         
-        image_files = list(Path(images_dir).glob('*.jpg'))
+        image_files = sorted(list(Path(images_dir).glob('*.jpg')))
         print(f"Found {len(image_files)} images to augment")
         
         total_created = 0

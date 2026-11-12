@@ -16,6 +16,8 @@ class ImprovedWeaponDetector:
     def load_model(self):
         """Load the YOLO model"""
         try:
+            if not Path(self.model_path).exists():
+                print(f"⚠️ Warning: Model path does not exist: {self.model_path}")
             self.model = YOLO(self.model_path)
             print(f"✅ Model loaded: {self.model_path}")
             return True

@@ -48,6 +48,11 @@ nosetests.xml
 coverage.xml
 *.cover
 *.py,cover
+
+# Local runtime & alert captures
+invalid_frames/
+data/alerts/
+data/cache/
 .hypothesis/
 .pytest_cache/
 

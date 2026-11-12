@@ -19,6 +19,9 @@ def encode_faces(dataset_dir="dataset", encodings_file="encodings.pickle"):
 
         # Load image and convert to RGB
         image = cv2.imread(image_path)
+        if image is None:
+            print(f"[WARNING] Skipping unreadable image: {image_path}")
+            continue
         rgb_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
         # Detect face and compute embeddings

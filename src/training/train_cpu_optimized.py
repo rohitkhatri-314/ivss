@@ -19,8 +19,9 @@ def train_cpu_optimized_model():
     model = YOLO('yolov8n.pt')  # Nano model for CPU efficiency
     
     # CPU-optimized training configuration
+    dataset_yaml = 'test_images/weapon-detection.v4i.yolov5pytorch/data.yaml'
     training_config = {
-        'data': 'test_images/weapon-detection.v4i.yolov5pytorch/data.yaml',
+        'data': dataset_yaml,
         'epochs': 50,            # Reduced epochs for CPU training
         'batch': 4,              # Smaller batch size for CPU
         'imgsz': 416,            # Smaller image size for faster training

@@ -24,7 +24,7 @@ def compare_models():
     
     # Test on sample images
     test_dir = "test_images/weapon-detection.v4i.yolov5pytorch/train/images"
-    test_images = list(Path(test_dir).glob("*.jpg"))[:20]  # Test 20 images
+    test_images = sorted(list(Path(test_dir).glob("*.jpg")))[:20]  # Test 20 images
     
     print(f"\n🧪 Testing on {len(test_images)} images...")
     

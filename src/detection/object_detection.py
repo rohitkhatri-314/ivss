@@ -198,7 +198,8 @@ def object_detection_process(shm_name, shape, output_queue, cam_id,objectThresho
                     print(f"[ERROR] Failed to save detection image: {e}")
 
         if detected_objects:
-            output_queue.put({"cam_id": cam_id, "detections": detected_objects})
+            if not output_queue.full():
+                output_queue.put({"cam_id": cam_id, "detections": detected_objects})
 
 if __name__ == "__main__":
     print("Run main.py to start the system.")

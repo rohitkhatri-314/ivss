@@ -45,8 +45,8 @@ A comprehensive AI-powered security monitoring system featuring real-time face r
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/yourusername/IVSS.git
-   cd IVSS
+   git clone https://github.com/rohitkhatri-314/ivss.git
+   cd ivss
    ```
 
 2. **Set Up Virtual Environment:**

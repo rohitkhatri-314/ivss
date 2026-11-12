@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Functions
     function updateStatus(status, isError = false) {
+        if (!statusText) return;
         statusText.textContent = status;
         statusIcon.className = 'status-icon';
         if (isError) {
